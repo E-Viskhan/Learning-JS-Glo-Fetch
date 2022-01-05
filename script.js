@@ -6,7 +6,7 @@ getData({ url: 'db.json' })
   .then(data => data.json())
   .then(json => {
     console.log(json);
-    sendData({ url: 'https://jsonplaceholder.typicode.com/posts', data: json })
+    sendData({ url: 'https://jsonplaceholder.typicode.com/posts', data: JSON.stringify(json) })
       .then(() => {
         console.log('Успешная отправка данных');
       })
